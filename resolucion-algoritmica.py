@@ -6,7 +6,7 @@ def clasificar(num):
 numeros = []
 
 while True:
-    opci=int(input("\nMENÚ\n1. Clasificación de números\n2. Suma de números y promedio\n3. Salir\n"))
+    opci=int(input("\nMENÚ\n1. Clasificación de números\n2. Suma de números y promedio\n3. Suma Dígitos\n4. Salir\n"))
 
     if opci==1:
         print("___ Clasificación de Números ___")
@@ -32,9 +32,15 @@ while True:
         print(f"El promedio es: {promedio}")
 
     elif opci==3:
+        suma_digitos=0
+        numero=int(input("Ingrese un número entero: "))
+        for digito in str(numero):
+            suma_digitos+=int(digito)
+        print(f"La suma de los dígitos del número {numero} es: {suma_digitos}")
+
+    elif opci==4:
         print("Se cerrará el programa...")
         break
     else:
         print("Opción inválida")
-#resolucion-algoritmica-python
-#trabajo-con-texto-en python
+
